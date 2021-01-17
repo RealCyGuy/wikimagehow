@@ -2,3 +2,9 @@
   publish = "build"
   command = "npm run build"
   functions = "functions"
+[dev]
+  command = "snowpack dev --open none"
+  port = 8888
+  targetPort = 8080
+  framework = "#custom"
+  autoLaunch = true

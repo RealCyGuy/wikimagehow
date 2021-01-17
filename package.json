@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "snowpack dev",
+    "start": "netlify dev",
     "build": "snowpack build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "netlify-cli": "^3.2.0",
     "node-fetch": "^2.6.1",
     "snowpack": "^3.0.11"
   }
