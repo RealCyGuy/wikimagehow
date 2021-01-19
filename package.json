@@ -10,8 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@snowpack/plugin-postcss": "^1.1.0",
+    "autoprefixer": "^10.2.1",
     "netlify-cli": "^3.2.0",
     "node-fetch": "^2.6.1",
-    "snowpack": "^3.0.11"
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "snowpack": "^3.0.11",
+    "tailwindcss": "^2.0.2"
   }
 }
