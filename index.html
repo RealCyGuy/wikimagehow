@@ -18,7 +18,7 @@
       class="flex justify-center items-center h-screen bg-gradient-to-tr from-blue-300 to-green-300"
     >
       <svg
-        class="animate-spin h-5 w-5 text-white"
+        class="loader animate-spin h-5 w-5 text-white"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -37,20 +37,18 @@
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
         ></path>
       </svg>
-      <img
-        class="max-h-screen px-2 py-14 hidden"
-        alt="Random Wikihow Image"
-      />
+      <img class="image max-h-screen px-2 py-14 hidden" alt="Random Wikihow Image" />
     </div>
     <div class="flex justify-center absolute bottom-0 w-full my-3">
       <button
-        class="font-sans font-semibold text-xl text-white inline px-2 py-1 mr-3 bg-gradient-to-tr from-green-400 to-blue-400 rounded-lg focus:outline-white disabled:opacity-60"
+        class="back font-sans font-semibold text-xl text-white inline px-2 py-1 mr-3 bg-gradient-to-tr from-green-400 to-blue-400 rounded-lg focus:outline-white disabled:opacity-60"
         disabled
       >
         back
       </button>
       <button
-        class="font-sans font-semibold text-xl text-white inline px-2 py-1 bg-gradient-to-tr from-green-400 to-blue-400 rounded-lg focus:outline-white disabled:opacity-60"
+        class="next font-sans font-semibold text-xl text-white inline px-2 py-1 bg-gradient-to-tr from-green-400 to-blue-400 rounded-lg focus:outline-white disabled:opacity-60"
+        disabled
       >
         next
       </button>
