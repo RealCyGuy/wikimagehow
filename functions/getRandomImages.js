@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 exports.handler = async function (event, context) {
   return fetch(
-    "https://www.wikihow.com/api.php?format=json&action=query&list=random&rnnamespace=0&rnlimit=7"
+    "https://www.wikihow.com/api.php?format=json&action=query&list=random&rnnamespace=0&rnlimit=10"
   )
     .then((articles) => articles.json())
     .then((articles) => {
