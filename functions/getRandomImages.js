@@ -17,7 +17,7 @@ exports.handler = async function (event, context) {
                 image["parse"]["images"][
                   Math.floor(Math.random() * image["parse"]["images"].length)
                 ];
-              if (random_image == null) {
+              if (random_image == null || random_image.includes("TITLE") || random_image.endsWith(".gif")) {
                 return;
               }
               return fetch(
