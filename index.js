@@ -11,5 +11,6 @@ async function startup() {
   image.src = queue[0][1];
   loader.remove();
   image.classList.remove("hidden");
+  next.disabled = false;
 }
 startup();
