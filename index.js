@@ -19,11 +19,19 @@ async function startup() {
 }
 startup();
 next.addEventListener("click", async function () {
+  next.disabled = true;
   index += 1;
   image.src = queue[index][1];
   title.textContent = queue[index][0];
   title.href = "https://wikihow.com/" + queue[index][0];
   back.disabled = false;
+  if (image.complete) {
+    next.disabled = false;
+  } else {
+    image.addEventListener("load", function () {
+      next.disabled = false;
+    });
+  }
   try {
     new Image().src = queue[index + 1][1];
   } catch {
