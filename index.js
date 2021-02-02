@@ -18,3 +18,20 @@ async function startup() {
   title.classList.add("underline");
 }
 startup();
+next.addEventListener("click", async function () {
+  index += 1;
+  image.src = queue[index][1];
+  title.textContent = queue[index][0];
+  title.href = "https://wikihow.com/" + queue[index][0];
+  back.disabled = false;
+  try {
+    new Image().src = queue[index + 1][1];
+  } catch {
+    next.disabled = true;
+    const response = await fetch("/.netlify/functions/getRandomImages");
+    const images = await response.json();
+    console.log(images);
+    queue = queue.concat(images);
+    next.disabled = false;
+  }
+});
