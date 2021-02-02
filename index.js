@@ -16,6 +16,7 @@ async function startup() {
   title.textContent = queue[0][0];
   title.href = "https://wikihow.com/" + queue[0][0];
   title.classList.add("underline");
+  new Image().src = queue[1][1];
 }
 startup();
 next.addEventListener("click", async function () {
