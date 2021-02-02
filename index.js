@@ -44,3 +44,12 @@ next.addEventListener("click", async function () {
     next.disabled = false;
   }
 });
+back.addEventListener("click", function () {
+  index -= 1;
+  image.src = queue[index][1];
+  title.textContent = queue[index][0];
+  title.href = "https://wikihow.com/" + queue[index][0];
+  if (index === 0) {
+    back.disabled = true;
+  }
+});
