@@ -17,7 +17,11 @@ exports.handler = async function (event, context) {
                 image["parse"]["images"][
                   Math.floor(Math.random() * image["parse"]["images"].length)
                 ];
-              if (random_image == null || random_image.includes("TITLE") || random_image.endsWith(".gif")) {
+              if (
+                random_image == null ||
+                random_image.includes("TITLE") ||
+                random_image.endsWith(".gif")
+              ) {
                 return;
               }
               return fetch(
@@ -26,7 +30,9 @@ exports.handler = async function (event, context) {
                 .then((image_link) => image_link.json())
                 .then((image_link) => {
                   id = Object.keys(image_link["query"]["pages"])[0];
-                  return image_link["query"]["pages"][id]["imageinfo"][0]["url"];
+                  return image_link["query"]["pages"][id]["imageinfo"][0][
+                    "url"
+                  ];
                 })
                 .then((image_link) => {
                   return [image["parse"]["title"], image_link];
