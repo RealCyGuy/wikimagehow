@@ -24,8 +24,9 @@ exports.handler = async function (event, context) {
               ) {
                 return;
               }
+              random_image = random_image.replace(".", "%2E");
               return fetch(
-                `https://www.wikihow.com/api.php?format=json&action=query&titles=File:${random_image}&prop=imageinfo&iiprop=url`
+                `https://www.wikihow.com/api.php?format=json&action=query&titles=Image:${random_image}&prop=imageinfo&iiprop=url`
               )
                 .then((image_link) => image_link.json())
                 .then((image_link) => {
